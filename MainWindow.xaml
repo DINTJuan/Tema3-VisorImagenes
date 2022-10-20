@@ -6,36 +6,50 @@
         xmlns:local="clr-namespace:Tema3_VisorImagenes"
         mc:Ignorable="d"
         Title="Visor" Height="450" Width="800" MinHeight="450" MinWidth="700" Icon="Imagenes\48.ico">
+    <Window.Resources>
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="Height" Value="150"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="2"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="Datos">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="FontFamily" Value="Rubik"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <DockPanel>
             <DockPanel LastChildFill="false" Dock="Bottom" Height="80" Margin="20" Background="LightBlue">
-                <TextBlock VerticalAlignment="Center" DockPanel.Dock="Left" FontSize="20" Margin="3" FontFamily="Rubik">Nº de imagenes: 8</TextBlock>
-                <TextBlock VerticalAlignment="Center" DockPanel.Dock="Right" FontSize="20" Margin="3" FontFamily="Rubik">Diseñado Juan Mateo Sánchez</TextBlock>
+                <TextBlock Style="{StaticResource Datos}"  DockPanel.Dock="Left">Nº de imagenes: 8</TextBlock>
+                <TextBlock Style="{StaticResource Datos}"  DockPanel.Dock="Right">Diseñado Juan Mateo Sánchez</TextBlock>
             </DockPanel>
             <Border BorderThickness="4" BorderBrush="Black" DockPanel.Dock="Right" CornerRadius="9" Margin="5" Background="LightGreen" Width="120">
                 <DockPanel>
                     <StackPanel DockPanel.Dock="Bottom">
-                        <Button Margin="2">Rotar</Button>
-                        <Button Margin="2">Recortar</Button>
+                        <Button>Rotar</Button>
+                        <Button>Recortar</Button>
                     </StackPanel>
                     <StackPanel DockPanel.Dock="Top">
-                        <Button Margin="2">Añadir imagen</Button>
-                        <Button Margin="2">Eliminar imagen</Button>
-                        <Button Margin="2">Eliminar todas</Button>
+                        <Button>Añadir imagen</Button>
+                        <Button>Eliminar imagen</Button>
+                        <Button>Eliminar todas</Button>
                     </StackPanel>
                     
                 </DockPanel>
             </Border>
             <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="40" FontFamily="Rubik" Margin="10">Visor de imágenes</TextBlock>
             <WrapPanel Orientation="Horizontal">
-                <Image Source="Imagenes\episodioIV.jpg" Height="150"/>
-                <Image Source="Imagenes\episodioIV.jpg" Height="150"/>
-                <Image Source="Imagenes\episodioIV.jpg" Height="150"/>
-                <Image Source="Imagenes\episodioIV.jpg" Height="150"/>
-                <Image Source="Imagenes\episodioIV.jpg" Height="150"/>
-                <Image Source="Imagenes\episodioIV.jpg" Height="150"/>
-                <Image Source="Imagenes\episodioIV.jpg" Height="150"/>
-                <Image Source="Imagenes\episodioIV.jpg" Height="150"/>
+                <Image Source="Imagenes\episodioIV.jpg" />
+                <Image Source="Imagenes\episodioIV.jpg" />
+                <Image Source="Imagenes\episodioIV.jpg" />
+                <Image Source="Imagenes\episodioIV.jpg" />
+                <Image Source="Imagenes\episodioIV.jpg" />
+                <Image Source="Imagenes\episodioIV.jpg" />
+                <Image Source="Imagenes\episodioIV.jpg" />
+                <Image Source="Imagenes\episodioIV.jpg" />
             </WrapPanel>
         </DockPanel>
     </Grid>
